@@ -25,6 +25,8 @@ makeCacheMatrix <- function(x = matrix()) {
     x
     }
     
+    ##  '<<-' this symbol is used to completely set the value of inv to m 
+    
     setinverse <- function(inv)
     {
     m <<- inv
@@ -46,7 +48,7 @@ cacheSolve <- function(x, ...)
 {
     
     ## we are getting the data in below line
-     m <- x$getiinverse()
+     m <- x$getinverse()
     ## we are checking for null condition ,if it is false we are loading the data which is already computed.
     if(!is.null(m))
     {
